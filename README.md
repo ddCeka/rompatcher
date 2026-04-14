@@ -1,4 +1,4 @@
-[![Rust 2024](https://img.shields.io/badge/rust-1.91%2B-orange?logo=rust)](https://www.rust-lang.org/)
+[![Rust 2024](https://img.shields.io/badge/rust-1.94-orange?logo=rust)](https://www.rust-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue)](LICENSE)
 [![Tests](https://img.shields.io/badge/tests-282%20passing-success)](crates/)
 [![Safe Rust](https://img.shields.io/badge/unsafe-0%25-success)](crates/)
