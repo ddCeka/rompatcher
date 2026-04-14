@@ -1,0 +1,23 @@
+[package]
+name = "rompatcher-features"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Extended features for ROM patching (validation, hash checking, etc.)"
+
+[dependencies]
+rompatcher-core = { path = "../core" }
+thiserror.workspace = true
+crc32fast = "1.5"
+md5 = { version = "0.7", optional = true }
+sha1 = { version = "0.10", optional = true }
+sha2 = { version = "0.10", optional = true }
+minreq = { version = "2.12", optional = true, features = ["https-rustls"] }
+
+[features]
+default = ["validation"]
+validation = ["md5", "sha1", "sha2"]
+retroachievements = ["md5", "minreq"]

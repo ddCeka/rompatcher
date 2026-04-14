@@ -1,0 +1,81 @@
+[package]
+name = "rompatcher-formats"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Patch format implementations (IPS, BPS, UPS, APS, EBP, RUP, PPF, xdelta)"
+
+[dependencies]
+rompatcher-core = { path = "../core" }
+rompatcher-features = { path = "../features" }
+thiserror.workspace = true
+crc32fast = "1.5"
+crc16 = "0.4"
+md5 = "0.7"
+byteorder = "1.5"
+bzip2 = "0.4"
+
+[dev-dependencies]
+divan = "0.1"
+rompatcher-features = { path = "../features" }
+bzip2 = "0.4"
+
+[features]
+default = ["ips", "bps", "ups", "aps", "ebp", "rup", "ppf", "xdelta", "bdf"]
+ips = []
+bps = []
+ups = []
+aps = []
+ebp = []
+rup = []
+ppf = []
+xdelta = []
+bdf = []
+
+[[bench]]
+name = "ips_bench"
+harness = false
+required-features = ["ips"]
+
+[[bench]]
+name = "bps_bench"
+harness = false
+required-features = ["bps"]
+
+[[bench]]
+name = "ups_bench"
+harness = false
+required-features = ["ups"]
+
+[[bench]]
+name = "aps_bench"
+harness = false
+required-features = ["aps"]
+
+[[bench]]
+name = "ebp_bench"
+harness = false
+required-features = ["ebp"]
+
+[[bench]]
+name = "rup_bench"
+harness = false
+required-features = ["rup"]
+
+[[bench]]
+name = "ppf_bench"
+harness = false
+required-features = ["ppf"]
+
+[[bench]]
+name = "xdelta_bench"
+harness = false
+required-features = ["xdelta"]
+
+[[bench]]
+name = "bdf_bench"
+harness = false
+required-features = ["bdf"]
