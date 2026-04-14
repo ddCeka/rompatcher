@@ -1,4 +1,4 @@
-# Just commands for rom-patcher-rs
+# Just commands for rompatcher
 # Install just: cargo install just
 # Run: just <command>
 

@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-# Sweet Dracula Theme Colors (TrueColor)
 # Hex: #BD93F9 (Purple)
 COLOR_PRIMARY='\033[38;2;189;147;249m'
 # Hex: #FF79C6 (Pink)
@@ -22,10 +21,10 @@ if [ ! -f "Cargo.toml" ]; then
 fi
 
 # Build the project
-cargo build --release -p rompatcher-cli
+cargo build --release -p rompatcher
 
 # Verify build success
-BINARY_PATH="target/release/rompatcher"
+BINARY_PATH="$CARGO_TARGET_DIR"
 if [ ! -f "$BINARY_PATH" ]; then
     echo -e "${COLOR_ERROR}Error: Binary not found at $BINARY_PATH after build.${NC}"
     exit 1
@@ -36,11 +35,10 @@ echo -e "${COLOR_SUCCESS}==> Build successful!${NC}"
 # Determine install location
 INSTALL_DIR="$HOME/.local/bin"
 if [ ! -d "$INSTALL_DIR" ]; then
-    echo -e "${COLOR_INFO}==> '$INSTALL_DIR' does not exist. Checking '$HOME/bin'...${NC}"
+    echo -e "${COLOR_INFO}==> '$INSTALL_DIR' does not exist. Checking '$INSTALL_DIR'...${NC}"
     INSTALL_DIR="$HOME/bin"
     if [ ! -d "$INSTALL_DIR" ]; then
-        echo -e "${COLOR_INFO}==> Creating '$HOME/.local/bin'...${NC}"
-        INSTALL_DIR="$HOME/.local/bin"
+        echo -e "${COLOR_INFO}==> Creating '$INSTALL_DIR'...${NC}"
         mkdir -p "$INSTALL_DIR"
     fi
 fi

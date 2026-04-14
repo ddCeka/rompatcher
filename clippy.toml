@@ -1,3 +1,0 @@
-# Clippy configuration
-# Enforce strict linting - all warnings become errors in CI
-msrv = "1.94"
