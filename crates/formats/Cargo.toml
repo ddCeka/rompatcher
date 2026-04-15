@@ -14,14 +14,14 @@ rompatcher-features = { path = "../features" }
 thiserror.workspace = true
 crc32fast = "1.5"
 crc16 = "0.4"
-md5 = "0.7"
+md5 = "0.8"
 byteorder = "1.5"
-bzip2 = "0.4"
+bzip2 = "0.6"
 
 [dev-dependencies]
 divan = "0.1"
 rompatcher-features = { path = "../features" }
-bzip2 = "0.4"
+bzip2 = "0.6"
 
 [features]
 default = ["ips", "bps", "ups", "aps", "ebp", "rup", "ppf", "xdelta", "bdf"]

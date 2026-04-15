@@ -12,9 +12,9 @@ description = "Extended features for ROM patching (validation, hash checking, et
 rompatcher-core = { path = "../core" }
 thiserror.workspace = true
 crc32fast = "1.5"
-md5 = { version = "0.7", optional = true }
-sha1 = { version = "0.10", optional = true }
-sha2 = { version = "0.10", optional = true }
+md5 = { version = "0.8", optional = true }
+sha1 = { version = "0.11", optional = true }
+sha2 = { version = "0.11", optional = true }
 minreq = { version = "2.12", optional = true, features = ["https-rustls"] }
 
 [features]
