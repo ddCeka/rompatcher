@@ -1,0 +1,37 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# Test artifacts
+*.profraw
+*.profdata
+
+# Test files with ROM sources/downloads
+test_files/DOWNLOAD_INSTRUCTIONS.md
+
+# ROM files (copyrighted game files - never commit these)
+*.gb
+*.gbc
+*.gba
+*.nes
+*.smc
+*.sfc
+*.n64
+*.z64
+*.v64
+*.nds
+*.3ds
+*.iso
+*.cue
+*.rom
+
+# Binary disc images that might be ROMs (PlayStation, etc.)
+# Note: .bin files are commonly used for PlayStation ROMs
+# Patch files use specific extensions (.ips, .bps, .ppf, etc.)
+*.bin
+
+# Fuzzing artifacts
+fuzz/corpus/
+fuzz/artifacts/
+fuzz/target/
